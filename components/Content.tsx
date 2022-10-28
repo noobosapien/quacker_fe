@@ -51,7 +51,7 @@ export default function Content() {
         const abortController = new AbortController();
         const signal = abortController.signal;
 
-        let response = await fetch('http://localhost:3000/pid/', {
+        let response = await fetch('http://3.104.94.74:3000/pid/', {
           method: 'GET',
           signal,
         });
@@ -64,7 +64,7 @@ export default function Content() {
 
         //websocket
 
-        const wss = new WebSocket('ws://localhost:3001/');
+        const wss = new WebSocket('ws://3.104.94.74:3001/');
 
         wss.onopen = async function (e) {
           console.log('Connection to the index ws server opened');
