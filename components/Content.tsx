@@ -206,7 +206,7 @@ export default function Content() {
       />
 
       <iframe
-        src="http://localhost:3000"
+        src="http://3.104.94.74:3000"
         id="if"
         style={{
           height: '100vh',
