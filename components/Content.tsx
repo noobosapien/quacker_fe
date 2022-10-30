@@ -208,7 +208,7 @@ export default function Content() {
 
       <iframe
         // src="http://localhost:3000"
-        src="https://server.wonderplot.com"
+        src="https://server.wondersplot.com"
         id="if"
         style={{
           height: '100vh',
