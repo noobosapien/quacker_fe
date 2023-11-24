@@ -51,7 +51,8 @@ export default function Content() {
         const abortController = new AbortController();
         const signal = abortController.signal;
 
-        let response = await fetch('https://server.wondersplot.com/pid/', {
+        // let response = await fetch('http://localhost:3000/pid/', {
+        let response = await fetch('http://192.168.1.16:3000/pid/', {
           method: 'GET',
           signal,
         });
@@ -64,8 +65,8 @@ export default function Content() {
 
         //websocket
 
-        const wss = new WebSocket('wss://wsserver.wondersplot.com/');
-        // const wss = new WebSocket('wss://wsserver.wondersplot.com/');
+        const wss = new WebSocket('ws://192.168.1.16:3001/');
+        // const wss = new WebSocket('ws://localhost:3001/');
 
         wss.onopen = async function (e) {
           console.log('Connection to the index ws server opened');
@@ -208,7 +209,8 @@ export default function Content() {
 
       <iframe
         // src="http://localhost:3000"
-        src="https://server.wondersplot.com"
+        src="http://192.168.1.16:3000"
+        // src="https://server.wondersplot.com"
         id="if"
         style={{
           height: '100vh',
